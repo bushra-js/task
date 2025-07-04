@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Interactive Product Box</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      padding: 40px;
+    }
+
+    .product-box {
+      width: 400px;
+      background: white;
+      border: 2px solid gray;
+      margin: 20px auto;
+      padding: 20px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-box:hover {
+      padding-bottom: 100px;
+      border: 3px solid pink;
+    }
+
+    .top-section {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .left {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .left input[type="radio"] {
+      accent-color: pink;
+      margin-right: 10px;
+      margin-top: 5px;
+    }
+
+    .heading {
+      font-size: 18px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .offer {
+      background-color: pink;
+      color: white;
+      font-size: 12px;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .description {
+      font-size: 13px;
+      margin-top: 5px;
+    }
+
+    .right {
+      text-align: right;
+    }
+
+    .price {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .original {
+      font-size: 13px;
+      color: #999;
+      text-decoration: line-through;
+    }
+
+    .expanded-section {
+      margin-top: 20px;
+      display: none;
+      opacity: 0;
+      transition: all 0.3s ease;
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+    }
+
+    .product-box:hover .expanded-section {
+      display: block;
+      opacity: 1;
+    }
+
+    table{
+      width: 100%;
+      
+      margin-top: 10px;
+    }
+
+     td {
+      border: 1px solid black;
+      padding: 6px;
+      text-align: center;
+    }
+
+    .no-product-box {
+      width: 400px;
+      background: white;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .button-product-box {
+      width: 300px;
+      background: pink;
+      border-radius: 10px;
+      margin: 10px auto;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .button {
+      color: white;
+      background: pink;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+td{
+  border:1px solid black;
+}
+.heading-with-lines {
+      display: flex;
+      align-items: center;
+      text-align: center;
+color:pink;
+    }
+
+    .heading-with-lines::before,
+    .heading-with-lines::after {
+      content: '';
+      flex: 1;
+      border-bottom: 2px solid #ccc;
+      margin: 0 10px;
+    }
+.selected {
+  box-shadow: 0 0 10px 2px rgba(255, 105, 180, 0.6);
+  border-color: pink;
+}
+  </style>
+</head>
+<body>
+<div class="heading-with-lines">
+    <h2>YAY! it's BOGO</h2>
+  </div>
+
+  <!-- Reusable Product Box -->
+  <div class="product-box">
+    <div class="top-section">
+      <div class="left">
+        <input type="radio" name="product" />
+        <div>
+          <div class="heading">
+            1 Unit <span class="offer">10% OFF</span>
+          </div>
+          <div class="description">Standard Price</div>
+        </div>
+      </div>
+      <div class="right">
+        <h3 class="price">$10.00 USD</h3>
+        <del class="original">$24.00 USD</del>
+      </div>
+    </div>
+
+    <div class="expanded-section">
+     <table style="width:10%">
+<tr>
+    <th>solour</th>
+    <th>Size</th>
+    
+  </tr>
+
+  
+    
+    <td>s</td>
+    <td>colour</td>
+  </tr>
+  <tr>
+ 
+    <td>s</td>
+    <td>black</td>
+  </tr>
+</table>
+        
+        
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+
+
+  <!-- Duplicate boxes for display -->
+  <div class="product-box"> <!-- copy again if needed -->
+    <div class="top-section">
+      <div class="left">
+        <input type="radio" name="product" />
+        <div>
+          <div class="heading">
+            2 Unit <span class="offer">10% OFF</span>
+          </div>
+          <div class="description">Standard Price</div>
+        </div>
+      </div>
+      <div class="right">
+        <h3 class="price">$10.00 USD</h3>
+        <del class="original">$24.00 USD</del>
+      </div>
+    </div>
+
+    <div class="expanded-section">
+      <table style="width:10%">
+<tr>
+    <th>solour</th>
+    <th>Size</th>
+    
+  </tr>
+
+  
+    
+    <td>s</td>
+    <td>colour</td>
+  </tr>
+  <tr>
+ 
+    <td>s</td>
+    <td>black</td>
+  </tr>
+</table>
+    </div>
+  </div>
+  <div class="product-box">
+    <div class="top-section">
+      <div class="left">
+        <input type="radio" name="product" />
+        <div>
+          <div class="heading">
+            3rd Unit <span class="offer">10% OFF</span>
+          </div>
+          <div class="description">Standard Price</div>
+        </div>
+      </div>
+      <div class="right">
+        <h3 class="price">$10.00 USD</h3>
+        <del class="original">$24.00 USD</del>
+      </div>
+    </div>
+
+    <div class="expanded-section">
+      <table style="width:10%">
+<tr>
+    <th>solour</th>
+    <th>Size</th>
+    
+  </tr>
+
+  
+    
+    <td>s</td>
+    <td>colour</td>
+  </tr>
+  <tr>
+ 
+    <td>s</td>
+    <td>black</td>
+  </tr>
+</table>
+        
+        
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+
+ 
+  <div class="no-product-box">
+    <div class="top-section">
+      <div class="left">
+        <span class="offer">Free Delivery</span>
+      </div>
+      <div class="right">
+        <h3 class="price">Total: $18.00 USD</h3>
+      </div>
+    </div>
+
+    <div class="button-product-box">
+      <button class="button">+ Add to Cart</button>
+    </div>
+  </div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const productBoxes = document.querySelectorAll('.product-box');
+    const radios = document.querySelectorAll('input[type="radio"][name="product"]');
+
+    radios.forEach((radio, index) => {
+      radio.addEventListener('change', () => {
+        // Remove highlight from all boxes
+        productBoxes.forEach(box => box.classList.remove('selected'));
+
+        // Add highlight to the selected one
+        productBoxes[index].classList.add('selected');
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
